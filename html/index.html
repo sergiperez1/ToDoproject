@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="../main/style.css" type="text/css">
+    <link rel="icon" href="../main/icono.png" type="image/png">
+</head>
+<body>
+    <div id="tareas">
+        <h2>Listado de Tareas</h2>
+        <!-- Botones de control -->
+        <div class="botones">
+            <button type="button" id="crear">Crear</button>
+        </div>
+
+        <!-- Filtro -->
+        <select id="filtro">
+            <option value="todas">Todas</option>
+            <option value="pendientes">Pendientes</option>
+            <option value="completadas">Completadas</option>
+        </select>
+        
+        <!-- Lista de tareas -->
+        <ul id="lista-tareas">  
+            <!-- Las tareas se agregarán dinámicamente aquí -->
+        </ul>
+
+        <!-- Botón de cerrar sesión -->
+        <a href="register.html" id="logout">Cerrar sesión</a>
+    </div>
+
+    <!-- Modal para crear una nueva tarea -->
+    <div id="crearModal" class="modal">
+        <div class="modal-content">
+            <h3>Crear nueva tarea</h3>
+            <input type="text" id="new-task-title" placeholder="Título de la tarea" required>
+            <input type="text" id="new-task-desc" placeholder="Descripción de la tarea" required>
+            <button id="submitTask">Crear tarea</button>
+            <button class="close-btn" id="closeModal">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Modal para modificar una tarea -->
+    <div id="modificarModal" class="modal">
+        <div class="modal-content">
+            <h2>Modificar Tarea</h2>
+            <input type="text" id="modificar-task-title" placeholder="Título" />
+            <input type="text" id="modificar-task-desc" placeholder="Descripción" />
+            <button id="modificarTask">Modificar Tarea</button>
+            <button id="eliminar">Eliminar Tarea</button>
+            <button class="close-btn" id="closeModModal">Cerrar</button>
+        </div>
+    </div>
+
+    <script type="module" src="../main/index.js"></script>
+</body>
+</html>

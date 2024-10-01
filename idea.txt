@@ -1,0 +1,16 @@
+Aplicación de gestión de tareas (To-Do List).
+
+Archivos: manifest.json, index.html, main.js, styless.css
+
+Descripción: Desarrolla una aplicación donde los usuarios puedan crear, marcar como 
+completadas y eliminar tareas. 
+
+Funcionalidades: 
+Agregar nuevas tareas con fechas límite. 
+Marcar tareas como completadas. 
+Filtrar tareas por completadas y pendientes. 
+Guardar las tareas en un archivo JSON o una base de datos simple. 
+
+Extension de chrome
+
+Bibliotecas clave: Tkinter o Flask, json o sqlite3.

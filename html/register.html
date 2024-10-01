@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión</title>
+    <link rel="stylesheet" href="../main/style.css" type="text/css">
+    <link rel="icon" href="../main/icono.png" type="image/png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card-switch">
+            <label class="switch">
+                <input type="checkbox" class="toggle">
+                <span class="slider"></span>
+                <span class="card-side"></span>
+                <div class="flip-card__inner">
+                    <!-- Formulario de inicio de sesión -->
+                    <div class="flip-card__front">
+                        <div class="title">Iniciar Sesión</div>
+                        <form class="flip-card__form" id="Loginform" action="/login" method="POST">
+                            <div class="input-group">
+                                
+                                <input class="flip-card__input" type="email" id="email" name="email" required placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                               
+                                <input class="flip-card__input" type="password" id="password" name="password" pattern=".{6,}" required placeholder="Password">
+                            </div>
+                            <button class="flip-card__btn" type="submit">Iniciar Sesión</button>
+                            <p id="error-message-login" class="error-message"></p>
+                        </form>
+                        <p><a href="#" id="forgot-password">Reestablecer Contraseña</a></p>
+                    </div>
+                    <!-- Formulario de registro -->
+                    <div class="flip-card__back">
+                        <div class="title">Registro</div>
+                        <form class="flip-card__form" id="registerForm" action="/register" method="POST">
+                            <div class="input-group">
+                                
+                                <input class="flip-card__input" type="text" id="name" name="name" required placeholder="Name">
+                            </div>
+                            <div class="input-group">
+                
+                                <input class="flip-card__input" type="email" id="register-email" name="email" required placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                
+                                <input class="flip-card__input" type="password" id="register-password" name="password" pattern=".{6,}" required placeholder="Password">
+                            </div>
+                            <div class="input-group">
+                                
+                                <input class="flip-card__input" type="password" id="confirmPassword" name="confirmPassword" pattern=".{6,}" required placeholder="Confirm Password">
+                            </div>
+                            <button class="flip-card__btn" type="submit">Registrarse</button>
+                            <p id="error-message-register" class="error-message"></p>
+                        </form>                  
+                    </div>
+                </div>
+            </label>
+        </div>   
+    </div>
+
+    <script type="module" src="../main/config.js"></script>
+    <script type="module" src="../main/login.js"></script>
+    <script type="module" src="../main/register.js"></script>    
+</body>
+</html>
